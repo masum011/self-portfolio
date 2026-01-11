@@ -1,4 +1,5 @@
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import about from '../assets/me.png'
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -22,13 +23,11 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600">
-              MERN Stack Developer & Creative Problem Solver
+              Front-End Developer (React, JavaScript)
             </p>
 
             <p className="text-lg text-gray-500 max-w-xl">
-              I develop full-stack applications using MongoDB, Express, React, and Node.js.
-I focus on clean UI, smooth performance, and writing code that works well in real projects.
-Always improving and building better solutions.
+             Specializing in React and JavaScript with 3+ years of hands-on experience in modern UI architecture, performance optimization, and off-main-thread processing using Web Workers and Service Workers.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -76,7 +75,7 @@ Always improving and building better solutions.
           <div className="relative animate-fade-in-right">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
             <img
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={about}
               alt="Developer workspace"
               className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
             />

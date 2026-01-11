@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import discussion from '../assets/discussion.png'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -82,13 +83,12 @@ export default function Contact() {
 
             <div className="relative pt-8">
               <img
-                src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={discussion}
                 alt="Contact illustration"
                 className="rounded-2xl shadow-xl"
               />
             </div>
           </div>
-
           <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

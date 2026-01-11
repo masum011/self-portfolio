@@ -1,4 +1,5 @@
 import { Code2, Palette, Zap } from 'lucide-react';
+import aboutme from  '../assets/aboutme.png'
 
 export default function About() {
   return (
@@ -15,7 +16,7 @@ export default function About() {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
             <img
-              src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={aboutme}
               alt="Working environment"
               className="relative rounded-2xl shadow-xl w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"
             />
@@ -23,11 +24,11 @@ export default function About() {
 
           <div className="space-y-6">
             <p className="text-lg text-gray-600 leading-relaxed">
-              I am a Frontend/MERN Stack Developer with around 3 years of hands-on experience building fast, scalable, and user-friendly web applications.
+              I build modern web applications with a strong emphasis on clean code architecture, scalable UI design, and maintainable component systems.
             </p>
 
             <p className="text-lg text-gray-600 leading-relaxed">
-              My core strengths are React.js, Next.js, JavaScript (ES6+), Redux Toolkit, Tailwind CSS, REST APIs, and creating clean, responsive UI components.
+              My work includes performance optimization such as reducing render cycles, improving load times, and using Web Workers and Service Workers for background processing and caching.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-6 pt-6">

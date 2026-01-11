@@ -1,11 +1,30 @@
 import { ExternalLink, Github } from 'lucide-react';
+import dash from '../assets/dashboard.png';
+import land from '../assets/land.png';
+import ev from '../assets/evcarging.png'
 
 const projects = [
   {
     title: 'Someone Like Me (React, Redux Toolkit, Vite)',
     description: 'Built a dating dashboard with secure authentication, role-based access, MUI DataGrid CRUD features, and Chart.js analytics, using React and Redux Toolkit for a fast, responsive UI.',
-    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: dash,
     tags: ['React', 'Redux Toolkit', 'Chart.js', 'tailwind css'],
+    // github: '#',
+    // demo: '#',
+  },
+    {
+    title: 'Property Listing & Management Web App — React • TypeScript • Tailwind CSS',
+    description: 'MNJ Property Dealer is a modern real estate web application built with React, TypeScript, and Tailwind CSS for browsing and managing property listings efficiently.',
+    image: land,
+    tags: ['React', 'TypeScript', 'tailwind css'],
+    // github: '#',
+    // demo: '#',
+  },
+    {
+    title: 'Smart EV Charging for a Cleaner, Smarter Future',
+    description: 'Lion Charge is a modern EV charging platform designed to help users find, access, and manage charging stations with ease.',
+    image: ev,
+    tags: ['JavaScript', 'Next.js', 'tailwind css'],
     // github: '#',
     // demo: '#',
   },
@@ -17,7 +36,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Featured Projects
+            Projects
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
