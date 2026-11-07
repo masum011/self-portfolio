@@ -1,4 +1,5 @@
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail,ChevronLeft } from 'lucide-react';
+
 import about from '../assets/me.png'
 
 export default function Hero() {
@@ -18,22 +19,24 @@ export default function Hero() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                Masum Reza
+               Masum Reza
               </span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-600">
-              Front-End Developer (React, JavaScript)
-            </p>
+           <p className="text-xl md:text-2xl text-gray-600">
+  Frontend Developer (React, Next.js)
+</p>
 
-            <p className="text-lg text-gray-500 max-w-xl">
-             Specializing in React and JavaScript with 3+ years of hands-on experience in modern UI architecture, performance optimization, and off-main-thread processing using Web Workers and Service Workers.
-            </p>
+<p className="text-lg text-gray-500 max-w-xl">
+  3+ years building fast, scalable web applications with React and Next.js.
+  I specialise in performance optimisation, large-data handling with IndexedDB,
+  and off-main-thread processing using Web Workers and Service Workers.
+</p>
 
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r cursor-pointer from-blue-600 cursor-pointer to-cyan-600 text-white px-8 py-3 rounded-full font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
                 Get In Touch
               </button>

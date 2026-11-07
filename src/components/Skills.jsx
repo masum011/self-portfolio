@@ -1,29 +1,70 @@
-import { Code, Database, Layout, Server } from 'lucide-react';
+import { Layout, Layers, Zap, Server, Wrench } from 'lucide-react';
 
 const skillCategories = [
   {
     title: 'Frontend',
     icon: Layout,
-    skills: ['React', 'JavaScript', 'Tailwind CSS', 'Next.js'],
+    skills: [
+      'React',
+      'Next.js',
+      'JavaScript (ES6+)',
+      'TypeScript',
+      'HTML5',
+      'CSS3',
+      'Tailwind CSS',
+      'Material UI',
+      'Ant Design',
+      'React Router',
+    ],
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    title: 'Backend',
+    title: 'State & Data',
+    icon: Layers,
+    skills: [
+      'Redux Toolkit',
+      'Redux',
+      'Context API',
+      'Axios',
+      'REST APIs',
+      'Authentication Flows',
+      'Form Validation',
+    ],
+    color: 'from-purple-500 to-pink-500',
+  },
+  {
+    title: 'Performance & Browser APIs',
+    icon: Zap,
+    skills: [
+      'React.memo',
+      'useMemo / useCallback',
+      'Lazy Loading',
+      'Code Splitting',
+      'IndexedDB',
+      'Web Workers',
+      'Service Workers',
+    ],
+    color: 'from-amber-500 to-orange-500',
+  },
+  {
+    title: 'Backend & Databases',
     icon: Server,
-    skills: ['Node.js', 'Express', 'RESTful APIs'],
-    color: 'from-cyan-500 to-teal-500',
+    skills: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose'],
+    color: 'from-green-500 to-emerald-500',
   },
   {
-    title: 'Database',
-    icon: Database,
-    skills: [ 'MongoDB'],
-    color: 'from-teal-500 to-emerald-500',
-  },
-  {
-    title: 'Tools',
-    icon: Code,
-    skills: ['Git'],
-    color: 'from-emerald-500 to-green-500',
+    title: 'Tools & Workflow',
+    icon: Wrench,
+    skills: [
+      'Git',
+      'GitHub',
+      'Postman',
+      'Figma',
+      'Jira',
+      'Firebase (basic)',
+      'Deployment & Staging',
+    ],
+    color: 'from-slate-500 to-gray-700',
   },
 ];
 
