@@ -1,5 +1,8 @@
+
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X,ChevronLeft } from 'lucide-react';
+
+const navItems = ['home', 'about', 'skills', 'projects', 'contact'];
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,62 +12,79 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth',
+    });
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+        isScrolled
+          ? 'bg-white/70 backdrop-blur-xl shadow-sm border-b border-gray-200/50'
+          : 'bg-transparent border-b border-white/10'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+
+          {/* Logo */}
           <button
             onClick={() => scrollToSection('home')}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+            className="text-2xl cursor-pointer font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
           >
-            Portfolio
+           MASUM DEV
           </button>
 
-          <div className="hidden md:flex space-x-8">
-            {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-300 capitalize font-medium"
+                className={`capitalize font-medium cursor-pointer transition-colors duration-300 cursor-pointer ${
+                  isScrolled
+                    ? 'text-gray-700 hover:text-blue-600'
+                    : 'text-gray-800 hover:text-blue-600'
+                }`}
               >
                 {item}
               </button>
             ))}
           </div>
 
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700"
+            className={`md:hidden transition-colors cursor-pointer ${
+              isScrolled ? 'text-gray-800' : 'text-gray-800'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-white/90 backdrop-blur-xl border-t border-gray-200/50 shadow-lg cursor-pointer">
           <div className="px-4 py-4 space-y-3">
-            {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+            {navItems.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="block w-full text-left text-gray-700 hover:text-blue-600 transition-colors duration-300 capitalize font-medium py-2"
+                className="block w-full cursor-pointer text-left text-gray-700 hover:text-blue-600 transition-colors duration-300 capitalize font-medium py-2"
               >
                 {item}
               </button>

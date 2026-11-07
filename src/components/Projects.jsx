@@ -1,9 +1,38 @@
 import { ExternalLink, Github } from 'lucide-react';
 import dash from '../assets/dashboard.png';
 import land from '../assets/land.png';
-import ev from '../assets/evcarging.png'
+import ev from '../assets/evcarging.png';
+import lifeline from '../assets/lifeline.png';
+import apna from '../assets/apna.png';
+// import dash from '../assets/apna.png';
 
 const projects = [
+  
+{
+  title: 'LifeLine Medical – Pharmacy & Healthcare Website',
+  description:
+    'Developed a modern, responsive pharmacy and healthcare website featuring medicine categories, doctor profiles, visiting schedules, appointment booking, and WhatsApp integration. Implemented bilingual support (English and Bengali) with a user-friendly interface using React.js and Tailwind CSS.',
+  image: lifeline,
+  tags: [
+    'React.js',
+    'Vite',
+    'JavaScript',
+    'Tailwind CSS',
+    'Context API',
+    'Lucide React',
+  ],
+   github: 'https://github.com/masum011/LifeLine-Medical',
+  demo: 'https://lifelinemedicalshop.netlify.app/',
+},
+{
+  title: 'MAMUN Tea & Snack Chill Café (React, Vite, Tailwind CSS)',
+  description:
+    'Developed a responsive café website featuring a bilingual English and Bengali interface, dynamic menu categories, interactive shopping cart, and WhatsApp-based ordering with customer delivery details and GPS location sharing.',
+  image: apna,
+  tags: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'WhatsApp Integration', 'Geolocation API'],
+  github: 'https://github.com/masum011/Apna-Chai-Coffee',
+  demo: 'https://apnachaicoffee.netlify.app/',
+},
   {
     title: 'Someone Like Me (React, Redux Toolkit, Vite)',
     description: 'Built a dating dashboard with secure authentication, role-based access, MUI DataGrid CRUD features, and Chart.js analytics, using React and Redux Toolkit for a fast, responsive UI.',
@@ -79,7 +108,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* <div className="flex gap-4">
+                <div className="flex gap-4">
                   <a
                     href={project.github}
                     className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
@@ -94,7 +123,7 @@ export default function Projects() {
                     <ExternalLink size={20} />
                     <span className="text-sm font-medium">Demo</span>
                   </a>
-                </div> */}
+                </div>
               </div>
             </div>
           ))}
