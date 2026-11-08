@@ -4,6 +4,7 @@ import land from '../assets/land.png';
 import ev from '../assets/evcarging.png';
 import lifeline from '../assets/lifeline.png';
 import apna from '../assets/apna.png';
+import prochesta from '../assets/prochesta-medical.png';
 // import dash from '../assets/apna.png';
 
 const projects = [
@@ -32,6 +33,15 @@ const projects = [
   tags: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'WhatsApp Integration', 'Geolocation API'],
   github: 'https://github.com/masum011/Apna-Chai-Coffee',
   demo: 'https://apnachaicoffee.netlify.app/',
+},
+{
+  title: 'Prochesta Medicare – Healthcare Website',
+  description:
+    "The website provides patients with easy access to hospital information, medical services, healthcare facilities, emergency contact details and location information through a clean and user-friendly interface.",
+  image: prochesta,
+  tags: ['HTML','CSS','JavaScript','React', 'Vite', 'Tailwind CSS',  'Geolocation API'],
+  github: 'https://github.com/masum011/prochesta-medicare',
+  demo: 'https://prochesta-medicare.netlify.app/',
 },
   {
     title: 'Someone Like Me (React, Redux Toolkit, Vite)',
