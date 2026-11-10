@@ -1,69 +1,106 @@
-import { ExternalLink, Github } from 'lucide-react';
-import dash from '../assets/dashboard.png';
-import land from '../assets/land.png';
-import ev from '../assets/evcarging.png';
-import lifeline from '../assets/lifeline.png';
-import apna from '../assets/apna.png';
-import prochesta from '../assets/prochesta-medical.png';
+import { ExternalLink, Github } from "lucide-react";
+import dash from "../assets/dashboard.png";
+import land from "../assets/land.png";
+import ev from "../assets/evcarging.png";
+import lifeline from "../assets/lifeline.png";
+import apna from "../assets/apna.png";
+import prochesta from "../assets/prochesta-medical.png";
+import dashboard from "../assets/dash.png";
 // import dash from '../assets/apna.png';
 
 const projects = [
-  
-{
-  title: 'LifeLine Medical – Pharmacy & Healthcare Website',
-  description:
-    'Developed a modern, responsive pharmacy and healthcare website featuring medicine categories, doctor profiles, visiting schedules, appointment booking, and WhatsApp integration. Implemented bilingual support (English and Bengali) with a user-friendly interface using React.js and Tailwind CSS.',
-  image: lifeline,
-  tags: [
-    'React.js',
-    'Vite',
-    'JavaScript',
-    'Tailwind CSS',
-    'Context API',
-    'Lucide React',
-  ],
-   github: 'https://github.com/masum011/LifeLine-Medical',
-  demo: 'https://lifelinemedicalshop.netlify.app/',
-},
-{
-  title: 'MAMUN Tea & Snack Chill Café (React, Vite, Tailwind CSS)',
-  description:
-    'Developed a responsive café website featuring a bilingual English and Bengali interface, dynamic menu categories, interactive shopping cart, and WhatsApp-based ordering with customer delivery details and GPS location sharing.',
-  image: apna,
-  tags: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'WhatsApp Integration', 'Geolocation API'],
-  github: 'https://github.com/masum011/Apna-Chai-Coffee',
-  demo: 'https://apnachaicoffee.netlify.app/',
-},
-{
-  title: 'Prochesta Medicare – Healthcare Website',
-  description:
-    "The website provides patients with easy access to hospital information, medical services, healthcare facilities, emergency contact details and location information through a clean and user-friendly interface.",
-  image: prochesta,
-  tags: ['HTML','CSS','JavaScript','React', 'Vite', 'Tailwind CSS',  'Geolocation API'],
-  github: 'https://github.com/masum011/prochesta-medicare',
-  demo: 'https://prochesta-medicare.netlify.app/',
-},
   {
-    title: 'Someone Like Me (React, Redux Toolkit, Vite)',
-    description: 'Built a dating dashboard with secure authentication, role-based access, MUI DataGrid CRUD features, and Chart.js analytics, using React and Redux Toolkit for a fast, responsive UI.',
+    title: "LifeLine Medical – Pharmacy & Healthcare Website",
+    description:
+      "Developed a modern, responsive pharmacy and healthcare website featuring medicine categories, doctor profiles, visiting schedules, appointment booking, and WhatsApp integration. Implemented bilingual support (English and Bengali) with a user-friendly interface using React.js and Tailwind CSS.",
+    image: lifeline,
+    tags: [
+      "React.js",
+      "Vite",
+      "JavaScript",
+      "Tailwind CSS",
+      "Context API",
+      "Lucide React",
+    ],
+    github: "https://github.com/masum011/LifeLine-Medical",
+    demo: "https://lifelinemedicalshop.netlify.app/",
+  },
+  {
+    title: "POS-Billing-Dashboard",
+    description: `built with React, Vite, Tailwind CSS, and Supabase. It includes a demo mode so the screens can be explored before connecting a Supabase project,
+
+The app uses React Router v6 createBrowserRouter with /, /checkout, /products, /sales, /inventory, and /reports routes. Shared UI lives in src/components, page-level screens in src/pages, and shared POS/auth state and hooks in src/context`,
+    image: dashboard,
+    tags: [
+      "React.js",
+      "Supabase",
+      "Vite",
+      "JavaScript",
+      "Tailwind CSS",
+      "Context API",
+      "Lucide React",
+    ],
+    github: "https://github.com/masum011/POS-Billing-Dashboard",
+    demo: "https://pos-billing-dashboard.netlify.app/",
+  },
+  {
+    title: "MAMUN Tea & Snack Chill Café (React, Vite, Tailwind CSS)",
+    description:
+      "Developed a responsive café website featuring a bilingual English and Bengali interface, dynamic menu categories, interactive shopping cart, and WhatsApp-based ordering with customer delivery details and GPS location sharing.",
+    image: apna,
+    tags: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "JavaScript",
+      "WhatsApp Integration",
+      "Geolocation API",
+    ],
+    github: "https://github.com/masum011/Apna-Chai-Coffee",
+    demo: "https://apnachaicoffee.netlify.app/",
+  },
+  {
+    title: "Prochesta Medicare – Healthcare Website",
+    description:
+      "The website provides patients with easy access to hospital information, medical services, healthcare facilities, emergency contact details and location information through a clean and user-friendly interface.",
+    image: prochesta,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Geolocation API",
+    ],
+    github: "https://github.com/masum011/prochesta-medicare",
+    demo: "https://prochesta-medicare.netlify.app/",
+  },
+  {
+    title: "Someone Like Me (React, Redux Toolkit, Vite)",
+    description:
+      "Built a dating dashboard with secure authentication, role-based access, MUI DataGrid CRUD features, and Chart.js analytics, using React and Redux Toolkit for a fast, responsive UI.",
     image: dash,
-    tags: ['React', 'Redux Toolkit', 'Chart.js', 'tailwind css'],
+    tags: ["React", "Redux Toolkit", "Chart.js", "tailwind css"],
     // github: '#',
     // demo: '#',
   },
-    {
-    title: 'Property Listing & Management Web App — React • TypeScript • Tailwind CSS',
-    description: 'MNJ Property Dealer is a modern real estate web application built with React, TypeScript, and Tailwind CSS for browsing and managing property listings efficiently.',
+  {
+    title:
+      "Property Listing & Management Web App — React • TypeScript • Tailwind CSS",
+    description:
+      "MNJ Property Dealer is a modern real estate web application built with React, TypeScript, and Tailwind CSS for browsing and managing property listings efficiently.",
     image: land,
-    tags: ['React', 'TypeScript', 'tailwind css'],
+    tags: ["React", "TypeScript", "tailwind css"],
     // github: '#',
     // demo: '#',
   },
-    {
-    title: 'Smart EV Charging for a Cleaner, Smarter Future',
-    description: 'Lion Charge is a modern EV charging platform designed to help users find, access, and manage charging stations with ease.',
+  {
+    title: "Smart EV Charging for a Cleaner, Smarter Future",
+    description:
+      "Lion Charge is a modern EV charging platform designed to help users find, access, and manage charging stations with ease.",
     image: ev,
-    tags: ['JavaScript', 'Next.js', 'tailwind css'],
+    tags: ["JavaScript", "Next.js", "tailwind css"],
     // github: '#',
     // demo: '#',
   },
@@ -79,7 +116,8 @@ export default function Projects() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of my recent projects that showcase my skills and experience
+            Here are some of my recent projects that showcase my skills and
+            experience
           </p>
         </div>
 
